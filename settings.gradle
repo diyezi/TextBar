@@ -1,0 +1,3 @@
+rootProject.name = "TextBar"
+include ':app'
+include ':DyzTextBar'
