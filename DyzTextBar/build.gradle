@@ -4,9 +4,6 @@ plugins {
 
 }
 
-apply plugin: 'maven'
-group = 'com.github.diyezi'
-
 android {
     compileSdkVersion 32
     buildToolsVersion "32.0.0"
@@ -51,8 +48,8 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 // 然后，您可以自定义发布的属性，如下所示。
-                groupId = 'com.xwrl.dyztextbar'
-                artifactId = 'final'
+                groupId = 'com.xwrl.custom.dyztextbar'
+                artifactId = 'textbar'
                 version = '1.0'
             }
             // Creates a Maven publication called “debug”.
@@ -62,8 +59,8 @@ afterEvaluate {
                 // 将组件应用于调试版本变体。
                 from components.debug
 
-                groupId = 'com.xwrl.dyztextbar'
-                artifactId = 'final-debug'
+                groupId = 'com.xwrl.custom.dyztextbar'
+                artifactId = 'textbar-debug'
                 version = '1.0'
             }
         }
