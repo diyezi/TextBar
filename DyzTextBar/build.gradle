@@ -9,7 +9,7 @@ group = 'com.github.diyezi'
 
 android {
     compileSdkVersion 32
-    buildToolsVersion "33.0.0"
+    buildToolsVersion "32.0.0"
 
     defaultConfig {
         minSdkVersion 26
@@ -51,7 +51,7 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 // 然后，您可以自定义发布的属性，如下所示。
-                groupId = 'com.xwrl.DyzTextBar'
+                groupId = 'com.xwrl.dyztextbar'
                 artifactId = 'final'
                 version = '1.0'
             }
@@ -62,7 +62,7 @@ afterEvaluate {
                 // 将组件应用于调试版本变体。
                 from components.debug
 
-                groupId = 'com.xwrl.DyzTextBar'
+                groupId = 'com.xwrl.dyztextbar'
                 artifactId = 'final-debug'
                 version = '1.0'
             }
