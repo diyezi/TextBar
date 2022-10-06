@@ -1,7 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'maven-publish'
+
 }
+
+apply plugin: 'maven'
+group = 'com.github.diyezi'
 
 android {
     compileSdkVersion 32
@@ -29,19 +33,38 @@ android {
     }
 }
 
+// link1 | 链接1 : https://developer.android.com/studio/build/maven-publish-plugin
+// link2 | 链接2 : https://docs.jitpack.io/android
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+// 由于组件仅在后Evaluate阶段创建，因此必须
+// 使用afterEvaluate（）生命周期方法配置发布。
 afterEvaluate {
     publishing {
-        def versionName = "1.0"
         publications {
             // Creates a Maven publication called "release".
+            // 创建一个名为“release”的Maven发布。
             release(MavenPublication) {
                 // Applies the component for the release build variant.
+                // 将组件应用于发布版本变体。
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.xwrl.custom.textbar'
-                artifactId = 'DyzTextBar'
-                version = versionName
+                // 然后，您可以自定义发布的属性，如下所示。
+                groupId = 'com.xwrl.DyzTextBar'
+                artifactId = 'final'
+                version = '1.0'
+            }
+            // Creates a Maven publication called “debug”.
+            // 创建名为“debug”的Maven发布。
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                // 将组件应用于调试版本变体。
+                from components.debug
+
+                groupId = 'com.xwrl.DyzTextBar'
+                artifactId = 'final-debug'
+                version = '1.0'
             }
         }
     }
