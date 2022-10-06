@@ -47,7 +47,7 @@ android {
 
                     // You can then customize attributes of the publication as shown below.
                     // 然后，您可以自定义发布的属性，如下所示。
-                    groupId = 'com.xwrl.custom.dyztextbar'
+                    groupId = 'com.xwrl.custom'
                     artifactId = 'textbar'
                     version = '1.0'
                 }
@@ -58,7 +58,7 @@ android {
                     // 将组件应用于调试版本变体。
                     from components.debug
 
-                    groupId = 'com.xwrl.custom.dyztextbar'
+                    groupId = 'com.xwrl.custom'
                     artifactId = 'textbar-debug'
                     version = '1.0'
                 }
